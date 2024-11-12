@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        #player-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="player-container">
+        <h2 id="title"></h2>
+        <img id="image" src="" alt="Release Image" style="max-width: 100%; height: auto; border-radius: 8px;">
+        <div id="player">
+            <p>Loading player...</p>
+        </div>
+        <div id="error-message" class="error-message" style="display: none;">
+            No value set for this episode. Please try again later.
+        </div>
+    </div>
+
+    <script>
+        // Function to fetch the releases.json file
+        async function loadReleases() {
+            try {
+                const response = await fetch('../backend stuff/releases.json'); // Make sure the JSON file is served by your server
+                if (!response.ok) throw new Error('Failed to load releases.json');
+                return await response.json();
+            } catch (error) {
+                console.error(error);
+                return [];
+            }
+        }
+
+        // Get the episode ID and language from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const episodeId = urlParams.get('id');
+        const lang = urlParams.get('lang') || 'en'; // Default to 'en' if no lang parameter is provided
+
+        // Variables for DOM elements
+        const titleElement = document.getElementById('title');
+        const imageElement = document.getElementById('image');
+        const playerElement = document.getElementById('player');
+        const errorMessageElement = document.getElementById('error-message');
+
+        // Load releases and find the matching episode
+        loadReleases().then(releasesJson => {
+            const release = releasesJson.find(r => r.id === episodeId);
+
+            // Check if a valid release was found
+            if (release) {
+                titleElement.innerText = (lang === 'br') ? release.displaytextbr : release.displaytexten;
+                imageElement.src = release.image;
+
+                // Determine which directlink to use based on the lang parameter
+                const directLink = lang === 'br' ? release.directlinkbr : release.directlinken;
+
+                // If a valid directlink exists, create the video player
+                if (directLink) {
+                    const videoPlayer = document.createElement('video');
+                    videoPlayer.setAttribute('controls', 'true');
+                    videoPlayer.setAttribute('src', directLink);
+
+                    // Clear any loading message and add the video player
+                    playerElement.innerHTML = '';
+                    playerElement.appendChild(videoPlayer);
+                } else {
+                    // If no valid video link is found, show an error message
+                    errorMessageElement.style.display = 'block';
+                    playerElement.style.display = 'none';
+                }
+            } else {
+                // If no matching episode is found, show an error message
+                errorMessageElement.style.display = 'block';
+                playerElement.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+/* General body styles */
+body {
+    background-color: #b90ed5;
+    /* Navy blue */
+    color: white;
+    /* Text color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Logo styles */
+.logo {
+    height: 50px;
+    /* Adjust the height of your logo */
+}
+
+/* Navigation link styles */
+nav a {
+    color: white;
+    /* Link color */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+/* Navigation hover effects */
+nav a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+/* Main content styles */
+main {
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    /* Stack releases vertically */
+    align-items: center;
+    /* Center align items */
+}
+
+/* Title styles */
+.releases-title {
+    text-align: center;
+    font-size: 36px;
+    margin: 20px 0;
+    color: white;
+}
+
+/* Individual release styles */
+.release {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    /* Space between releases */
+}
+
+/* Image styles for releases */
+.release img {
+    width: 100%;
+    max-width: 400px;
+    /* Adjust max width for images */
+    border: 2px solid black;
+    margin-bottom: 10px;
+    /* Space below images */
+}
+
+/* Link styles for download buttons */
+.release a {
+    display: block;
+    margin-top: 10px;
+    color: white;
+    /* Button text color */
+    background-color: #3399FF;
+    /* Button background */
+    padding: 10px;
+    text-align: center;
+    /* Center align text in button */
+    text-decoration: none;
+    /* Remove underline */
+    border-radius: 5px;
+    /* Rounded corners for the button */
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .releases-title {
+        font-size: 28px;
+        /* Smaller title on mobile */
+    }
+
+    .release img {
+        max-width: 90%;
+        /* Full width for images on mobile */
+    }
+
+    .release a {
+        width: 100%;
+        /* Full width for buttons */
+    }
+}

@@ -1,0 +1,84 @@
+/* General body styles */
+body {
+    background-color: #b90ed5;
+    /* Background color */
+    color: white;
+    /* Text color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Logo styles */
+.logo {
+    height: 50px;
+    /* Adjust the height of your logo */
+}
+
+/* Navigation link styles */
+nav a {
+    color: white;
+    /* Link color */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+/* Navigation hover effects */
+nav a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+/* Main content styles */
+main {
+    display: flex;
+    flex-direction: column;
+    /* Stack sections vertically */
+    align-items: center;
+    /* Center align items */
+    width: 100%;
+    /* Ensure main takes full width */
+}
+
+/* Title styles */
+main h1 {
+    text-align: center;
+    /* Center align title */
+    margin-bottom: 20px;
+    /* Space below title */
+}
+
+/* Section styles */
+section {
+    border: 2px solid white;
+    /* White outline */
+    border-radius: 5px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Padding inside the box */
+    width: 100%;
+    /* Full width */
+    margin: 10px 0;
+    /* Space between sections */
+    text-align: center;
+    /* Center text in sections */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    section {
+        width: 90%;
+        /* Make sections narrower on mobile */
+    }
+}
