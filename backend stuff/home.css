@@ -1,12 +1,34 @@
 /* General body styles */
 body {
-    background-color: #b90ed5;
-    /* Navy blue */
-    color: white;
-    /* Text color */
+    background-image: url('/backend stuff/pagemedia/mainbg.png');
+    background-size: cover;
+    background-position: center;
+    color: navy;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    position: relative;
+    height: 100vh;
+    /* Set to 100% of the viewport height */
+    width: 100vw;
+    /* Set to 100% of the viewport width */
+    overflow: hidden;
+    /* Prevent scrolling in any direction */
+    box-sizing: border-box;
+    /* Ensure padding and border are included in dimensions */
+}
+
+/* Position perko image without stretching */
+.perko-image {
+    position: absolute;
+    bottom: 75px;
+    right: 0;
+    height: 450px;
+    max-height: calc(100vh - 75px);
+    /* Limit height dynamically based on viewport */
+    width: auto;
+    max-width: 200px;
+    z-index: 1;
 }
 
 /* Header styles */
@@ -15,137 +37,176 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    width: 100%;
+    /* Ensure it spans the viewport */
+    box-sizing: border-box;
 }
 
-/* Logo styles */
-.logo {
-    height: 50px;
-    /* Adjust the height of your logo */
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    /* Use a percentage to dynamically adjust height */
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-bottom: 5px solid #a91b0d;
 }
 
 /* Navigation link styles */
 nav a {
     color: white;
-    /* Link color */
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
+    background-color: black;
+    border: 5px solid #bd0d07;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Navigation hover effects */
 nav a:hover {
-    text-decoration: underline;
-    /* Underline on hover */
+    background-color: red;
+    color: black;
 }
 
-/* Main content styles */
+/* Offset main content to prevent overlap with fixed navigation */
 main {
-    padding: 50px 20px;
+    margin-top: 10%;
+    padding: 20px;
+    height: calc(100vh - 10%);
+    /* Calculate remaining height dynamically */
+    box-sizing: border-box;
     display: flex;
-    justify-content: space-between;
-    /* Align content on both sides */
-    flex-wrap: wrap;
-    /* Allow wrapping for mobile */
+    flex-direction: column;
+    overflow: hidden;
+    /* Ensure no scrolling within main content */
 }
 
 /* Welcome box styles */
 .welcome-box {
     background-color: #3399FF;
-    /* Brighter blue */
     border: 2px solid black;
-    /* Black outline */
     border-radius: 5px;
-    /* Optional: rounded corners */
-    padding: 20px;
-    /* Padding inside the box */
-    width: 300px;
-    /* Fixed width */
-    height: auto;
-    /* Height adjusts based on content */
-    margin-right: 20px;
-    /* Space between box and carousel */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 10px;
+    flex: 1 1 auto;
+    /* Allow it to resize dynamically */
+    max-width: 300px;
+    /* Ensure it doesn't exceed limits */
+    box-sizing: border-box;
 }
 
 /* Carousel styles */
 .carousel {
     position: relative;
-    width: 480px;
-    /* Example width, adjust as needed */
-    height: 270px;
-    /* Calculated 16:9 aspect ratio based on width */
+    flex: 1 1 auto;
+    width: 100%;
+    max-height: 270px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    /* Align to the left */
+    box-sizing: border-box;
 }
 
 /* Carousel image styles */
 .carousel-image {
-    width: 100%;
-    height: 100%;
+    width: 35%;
+    /* Adjust the size of the image, you can change this value */
+    height: auto;
+    aspect-ratio: 16 / 9;
+    /* Maintain 16:9 aspect ratio */
     object-fit: cover;
     border: 2px solid black;
     border-radius: 5px;
 }
 
-/* Carousel button styles */
-.carousel-button {
+/* Remove arrows (buttons, divs, and pseudo-elements) */
+.carousel-prev,
+.carousel-next,
+.carousel-button,
+.carousel-arrow {
+    display: none !important;
+    /* Force hide arrows */
+}
+
+.carousel-prev::before,
+.carousel-next::before {
+    content: none !important;
+    /* Remove any pseudo-element arrows */
+}
+
+
+
+/* Bottom-left box styles */
+.bottom-left-box {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    /* Use percentage for dynamic adjustment */
+    background-color: black;
     color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    border-radius: 50%;
-}
-
-.carousel-button.left {
-    left: 10px;
-}
-
-.carousel-button.right {
-    right: 10px;
-}
-
-/* Content alignment */
-.content {
-    max-width: 800px;
-    /* Max width for content */
+    border-top: 5px solid red;
+    padding: 5px 20px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    /* Center align text */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Text inside bottom-left box */
+.bottom-left-box span {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.2;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 /* Mobile optimizations */
 @media (max-width: 768px) {
-    main {
-        flex-direction: column;
-        /* Stack elements vertically */
-        align-items: center;
-        /* Center align items */
-    }
-
     .welcome-box {
         width: 90%;
-        /* Make the welcome box wider on mobile */
-        margin: 0 0 20px;
-        /* Adjust margins for mobile */
     }
 
     .carousel {
-        width: 100%;
-        /* Full width for carousel on mobile */
         height: auto;
-        /* Auto height for responsive images */
     }
 
-    .carousel-image {
-        height: auto;
-        /* Responsive height */
+    .bottom-left-box {
+        font-size: 14px;
     }
+
+    .logo {
+        position: fixed;
+        /* Ensures it remains fixed in place */
+        top: 10px;
+        /* Adjust spacing from the top */
+        right: 10px;
+        /* Adjust spacing from the right */
+        height: 75px;
+        /* Adjust logo size if needed */
+        z-index: 1000;
+        /* Keeps it on top of other elements */
+    }
+
+
+
 }

@@ -44,6 +44,56 @@
         "displaytexten": "4 knights of the apocalypse Season 2 Episode 5",
         "displaytextbr": "Quatro Cavaleiros do Apocalipse - Temporada 2 Episódio 5",
         "image": "../backend stuff/releasephotos/image5.png",
+        "en": "https://nyaa.si/view/1902074",
+        "br": "",
+        "directlinken": "",
+        "directlinkbr": ""
+    },
+    {
+        "id": "season2episode6",
+        "displaytexten": "4 knights of the apocalypse Season 2 Episode 6",
+        "displaytextbr": "Quatro Cavaleiros do Apocalipse - Temporada 2 Episódio 6",
+        "image": "../backend stuff/releasephotos/image6.png",
+        "en": "https://nyaa.si/view/1905013",
+        "br": "",
+        "directlinken": "",
+        "directlinkbr": ""
+    },
+    {
+        "id": "season2episode7",
+        "displaytexten": "4 knights of the apocalypse Season 2 Episode 7",
+        "displaytextbr": "Quatro Cavaleiros do Apocalipse - Temporada 2 Episódio 7",
+        "image": "../backend stuff/releasephotos/image7.png",
+        "en": "https://nyaa.si/view/1907498",
+        "br": "",
+        "directlinken": "",
+        "directlinkbr": ""
+    },
+    {
+        "id": "season2episode8",
+        "displaytexten": "4 knights of the apocalypse Season 2 Episode 8",
+        "displaytextbr": "Quatro Cavaleiros do Apocalipse - Temporada 2 Episódio 8",
+        "image": "../backend stuff/releasephotos/image8.png",
+        "en": "https://nyaa.si/view/1908207",
+        "br": "",
+        "directlinken": "",
+        "directlinkbr": ""
+    },
+    {
+        "id": "season2episode9",
+        "displaytexten": "4 knights of the apocalypse Season 2 Episode 9",
+        "displaytextbr": "Quatro Cavaleiros do Apocalipse - Temporada 2 Episódio 9",
+        "image": "../backend stuff/releasephotos/image9.png",
+        "en": "",
+        "br": "",
+        "directlinken": "",
+        "directlinkbr": ""
+    },
+    {
+        "id": "season2episode10",
+        "displaytexten": "4 knights of the apocalypse Season 2 Episode 10",
+        "displaytextbr": "Quatro Cavaleiros do Apocalipse - Temporada 2 Episódio 10",
+        "image": "../backend stuff/releasephotos/image10.png",
         "en": "",
         "br": "",
         "directlinken": "",

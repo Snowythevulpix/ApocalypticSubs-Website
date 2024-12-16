@@ -1,6 +1,6 @@
 /* General body styles */
 body {
-    background-color: #b90ed5;
+    background-color: #870000;
     /* Background color */
     color: white;
     /* Text color */
@@ -23,19 +23,42 @@ header {
     /* Adjust the height of your logo */
 }
 
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    /* Use a percentage to dynamically adjust height */
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-bottom: 5px solid red;
+}
+
 /* Navigation link styles */
 nav a {
     color: white;
-    /* Link color */
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
+    background-color: black;
+    border: 5px solid #bd0d07;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Navigation hover effects */
 nav a:hover {
-    text-decoration: underline;
-    /* Underline on hover */
+    background-color: red;
+    color: black;
 }
 
 /* Main content styles */
@@ -73,8 +96,10 @@ section {
     /* Center text in sections */
     box-sizing: border-box;
     /* Include padding in width calculation */
+    background-color: #390000;
 }
 
+/*870000*/
 /* Mobile optimizations */
 @media (max-width: 768px) {
     section {

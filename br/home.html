@@ -18,18 +18,18 @@
 
 <body>
     <header>
-        <img src="../backend stuff/logo.png" alt="Group Logo" class="logo">
+        <img src="../backend stuff/logo.png" alt="Group Logo"
+            style="position: fixed; top: 10px; left: 10px; height: 50px; z-index: 1000;">
         <!-- Make sure the logo is also correctly referenced -->
         <nav>
-            <a href="./home.html">Home</a>
+            <a href="./">Home</a>
             <a href="./faq.html">FAQ</a>
-            <a href="./releases.html">Episódios</a>
+            <a href="./releases.html">Releases</a>
             <a href="../">EN</a>
         </nav>
     </header>
     <main>
-        <div class="welcome-box">
-            <h2>Boas-vindas à ApocalypticSubs!</h2>
+        <div class="bottom-left-box">
             <p>Nós estamos dedicados a trazer traduções de alta qualidade, e legendas para The Seven Deadly Sins: Quatro
                 Cavaleiros do Apocalipse. Nosso grupo trabalha nas horas vagas para entregar traduções corretas na
                 medida do possível, e lançamentos semanais para vocês aproveitarem o anime da melhor forma possível.
@@ -39,10 +39,12 @@
 
         <div class="carousel">
             <img class="carousel-image" src="../backend stuff/releasephotos/image1.png" alt="Image 1">
-            <!-- Updated to PNG -->
             <button class="carousel-button left" onclick="prevImage()">&#10094;</button>
             <button class="carousel-button right" onclick="nextImage()">&#10095;</button>
         </div>
+
+
+
     </main>
 
     <script src="../backend stuff/script.js"></script>
