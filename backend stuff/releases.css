@@ -1,6 +1,6 @@
 /* General body styles */
 body {
-    background-color: #a91b0d;
+    background-color: #870000;
     /* Navy blue */
     color: white;
     /* Text color */
@@ -104,7 +104,7 @@ main {
     margin-top: 10px;
     color: white;
     /* Button text color */
-    background-color: #3399FF;
+    background-color: #390000;
     /* Button background */
     padding: 10px;
     text-align: center;

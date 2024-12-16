@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const langLink = isPortuguese ? release.br : release.en;
 
                 const downloadLink = document.createElement("a");
-                downloadLink.href = langLink || "https://discord.gg/AsjunzY5"; // Redirect to Discord if link is missing
+                downloadLink.href = langLink || "https://discord.gg/hXPgj7dvM7"; // Redirect to Discord if link is missing
                 downloadLink.textContent = langLink
                     ? `${isPortuguese ? "Baixar" : "Download"} ${langText} (${isPortuguese ? "PT-BR" : "EN"})`
                     : (isPortuguese
