@@ -58,7 +58,7 @@ nav {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border-bottom: 5px solid #a91b0d;
+    border-bottom: 5px solid red;
 }
 
 /* Navigation link styles */
