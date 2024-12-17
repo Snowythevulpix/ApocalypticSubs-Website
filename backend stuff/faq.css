@@ -70,6 +70,8 @@ main {
     /* Center align items */
     width: 100%;
     /* Ensure main takes full width */
+    margin-top: 80px;
+    /* Adjust this value to match the height of your nav bar */
 }
 
 /* Title styles */
