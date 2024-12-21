@@ -4,7 +4,7 @@ body {
     background-size: cover;
     background-position: center;
     color: navy;
-    font-family: Arial, sans-serif;
+    font-family: 'Pirata One', sans-serif;
     margin: 0;
     padding: 0;
     position: relative;
@@ -59,6 +59,7 @@ nav {
     padding: 0;
     box-sizing: border-box;
     border-bottom: 5px solid red;
+    font-family: 'Pirata One', sans-serif;
 }
 
 /* Navigation link styles */
@@ -72,6 +73,7 @@ nav a {
     padding: 10px 20px;
     border-radius: 10px;
     transition: background-color 0.3s, color 0.3s;
+    font-family: 'Pirata One', sans-serif;
 }
 
 /* Navigation hover effects */
@@ -91,6 +93,7 @@ main {
     flex-direction: column;
     overflow: hidden;
     /* Ensure no scrolling within main content */
+    font-family: 'Pirata One', sans-serif;
 }
 
 /* Welcome box styles */
@@ -104,6 +107,7 @@ main {
     max-width: 300px;
     /* Ensure it doesn't exceed limits */
     box-sizing: border-box;
+    font-family: 'Pirata One', sans-serif;
 }
 
 /* Carousel styles */
@@ -167,6 +171,7 @@ main {
     text-align: center;
     box-sizing: border-box;
     overflow: hidden;
+    font-family: 'Pirata One', sans-serif;
 }
 
 /* Text inside bottom-left box */
@@ -178,6 +183,7 @@ main {
     text-overflow: ellipsis;
     max-width: 100%;
     overflow: hidden;
+    font-family: 'Pirata One', sans-serif;
 }
 
 /* Mobile optimizations */

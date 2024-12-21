@@ -4,7 +4,7 @@ body {
     /* Navy blue */
     color: white;
     /* Text color */
-    font-family: Arial, sans-serif;
+    font-family: 'Pirata One', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -40,6 +40,7 @@ nav {
     padding: 0;
     box-sizing: border-box;
     border-bottom: 5px solid red;
+    font-family: 'Pirata One', sans-serif;
 }
 
 /* Navigation link styles */
@@ -53,6 +54,7 @@ nav a {
     padding: 10px 20px;
     border-radius: 10px;
     transition: background-color 0.3s, color 0.3s;
+    font-family: 'Pirata One', sans-serif;
 }
 
 /* Navigation hover effects */
@@ -77,6 +79,7 @@ main {
     font-size: 36px;
     margin: 20px 0;
     color: white;
+    font-family: 'Pirata One', sans-serif;
 }
 
 /* Individual release styles */
@@ -85,6 +88,7 @@ main {
     flex-direction: column;
     align-items: center;
     margin-bottom: 40px;
+    font-family: 'Pirata One', sans-serif;
     /* Space between releases */
 }
 
@@ -113,6 +117,7 @@ main {
     /* Remove underline */
     border-radius: 5px;
     /* Rounded corners for the button */
+    font-family: 'Pirata One', sans-serif;
 }
 
 /* Mobile optimizations */

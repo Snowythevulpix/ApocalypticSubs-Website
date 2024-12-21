@@ -4,7 +4,6 @@ body {
     /* Background color */
     color: white;
     /* Text color */
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -15,6 +14,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    font-family: 'Pirata One', sans-serif;
 }
 
 /* Logo styles */
@@ -40,6 +40,7 @@ nav {
     padding: 0;
     box-sizing: border-box;
     border-bottom: 5px solid red;
+    font-family: 'Pirata One', sans-serif;
 }
 
 /* Navigation link styles */
@@ -53,6 +54,7 @@ nav a {
     padding: 10px 20px;
     border-radius: 10px;
     transition: background-color 0.3s, color 0.3s;
+    font-family: 'Pirata One', sans-serif;
 }
 
 /* Navigation hover effects */
@@ -72,6 +74,8 @@ main {
     /* Ensure main takes full width */
     margin-top: 80px;
     /* Adjust this value to match the height of your nav bar */
+
+
 }
 
 /* Title styles */
@@ -80,6 +84,25 @@ main h1 {
     /* Center align title */
     margin-bottom: 20px;
     /* Space below title */
+    font-family: 'Pirata One', sans-serif;
+}
+
+main h2 {
+    text-align: center;
+    /* Center align title */
+    margin-bottom: 20px;
+    /* Space below title */
+    font-family: 'Pirata One', sans-serif;
+    color: #ff1d1d;
+    text-shadow:
+        1px 1px 2px rgba(86, 0, 0, 0.5),
+        /* Black shadow for top-left */
+        -1px -1px 2px rgba(86, 0, 0, 0.5),
+        /* Black shadow for bottom-right */
+        1px -1px 2px rgba(86, 0, 0, 0.5),
+        /* Black shadow for bottom-left */
+        -1px 1px 2px rgba(86, 0, 0, 0.5);
+    /* Black shadow for top-right */
 }
 
 /* Section styles */
@@ -99,6 +122,8 @@ section {
     box-sizing: border-box;
     /* Include padding in width calculation */
     background-color: #390000;
+
+
 }
 
 /*870000*/
