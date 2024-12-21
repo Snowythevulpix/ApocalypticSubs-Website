@@ -120,9 +120,9 @@
 
         /* Regular desktop version: Video */
         video {
-            height: 94%;
+            height: 99.1%;
             /* Ensure the video occupies most of the available height */
-            object-fit: cover;
+            object-fit: contain;
             border: 4mm ridge rgb(135, 0, 0);
             /* Same border style as the title */
             width: 100%;
@@ -133,18 +133,6 @@
 
 
         /* Remove border in fullscreen mode */
-        video:fullscreen {
-            border: none;
-        }
-
-
-        /* Remove border in fullscreen mode */
-        video:fullscreen {
-            border: none;
-        }
-
-
-        /* Remove the border when the video is in fullscreen */
         video:fullscreen {
             border: none;
         }
@@ -506,7 +494,7 @@
                 /* Adjust height automatically */
                 max-height: 60vh;
                 /* Limit video height to 60% of the viewport */
-                object-fit: cover;
+                object-fit: contain;
                 border: 4mm ridge rgb(135, 0, 0);
                 /* Same border style as title */
                 margin-bottom: 10px;
