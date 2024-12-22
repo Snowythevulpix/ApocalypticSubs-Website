@@ -576,6 +576,7 @@
                 }
                 const releases = await response.json();
                 generateEpisodeList(releases);
+                handleURLFragment(releases); // Handle URL fragment for direct loading
             } catch (error) {
                 console.error(error);
                 document.getElementById('errorMessage').textContent = "Error loading episode data.";
@@ -587,7 +588,6 @@
             document.getElementById('episodeTitleDisplay').textContent = "Select any episode to play.";
             const episodeTitlesContainer = document.getElementById('episodeTitles');
             const episodeListContainer = document.getElementById('episodeListContainer');
-
 
             // Filter episodes with canplayer !== "no"
             const validEpisodes = releases.filter(episode => episode.canplayer !== "no");
@@ -604,7 +604,6 @@
                 episodeTitlesContainer.appendChild(episodeElement);
             });
         }
-
 
         // Function to load the selected episode
         function loadEpisode(episode) {
@@ -649,14 +648,26 @@
 
             // Append video to the player container
             playerContainer.appendChild(video);
+        }
 
-            // Append subtitle button below the video
-            playerContainer.appendChild(subtitleButton);
+        // Function to handle URL fragment and load the episode dynamically
+        function handleURLFragment(releases) {
+            const fragment = window.location.hash.substring(1); // Get the fragment without '#'
+            if (!fragment) return; // Exit if no fragment present
+
+            const matchedEpisode = releases.find(
+                episode => episode.id === fragment // Assuming 'id' in releases.json matches the fragment
+            );
+
+            if (matchedEpisode) {
+                loadEpisode(matchedEpisode); // Load the matching episode
+            } else {
+                console.warn('No matching episode found for the provided fragment:', fragment);
+            }
         }
 
         // Initialize by fetching the releases data
         fetchReleases();
-
     </script>
 </body>
 
