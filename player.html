@@ -589,8 +589,13 @@
             const episodeTitlesContainer = document.getElementById('episodeTitles');
             const episodeListContainer = document.getElementById('episodeListContainer');
 
-            // Filter episodes with canplayer !== "no"
-            const validEpisodes = releases.filter(episode => episode.canplayer !== "no");
+            // Filter episodes with canplayer !== "no" and hidden !== true
+            const validEpisodes = releases.filter(episode => {
+                console.log(episode); // Log each episode to see its properties
+                // Convert the 'hidden' value to a boolean (checking for "true" string or false value)
+                const isHidden = episode.hidden === "true" || episode.hidden === true;
+                return episode.canplayer !== "no" && !isHidden;
+            });
 
             if (validEpisodes.length === 0) {
                 episodeListContainer.style.display = 'none'; // Hide the episode list if no valid episodes
@@ -604,6 +609,7 @@
                 episodeTitlesContainer.appendChild(episodeElement);
             });
         }
+
 
         // Function to load the selected episode
         function loadEpisode(episode) {
@@ -668,6 +674,7 @@
 
         // Initialize by fetching the releases data
         fetchReleases();
+
     </script>
 </body>
 

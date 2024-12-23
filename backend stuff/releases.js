@@ -9,8 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
             const urlParams = new URLSearchParams(window.location.search);
             const requestedId = urlParams.keys().next().value;
 
-            // Filter data if an id is specified in the query
-            const filteredData = requestedId ? data.filter(release => release.id === requestedId) : data.slice().reverse();
+            // Filter data if an id is specified in the query, and exclude hidden releases
+            const filteredData = requestedId
+                ? data.filter(release => release.id === requestedId && release.hidden !== "true" && release.hidden !== true)
+                : data.slice().reverse().filter(release => release.hidden !== "true" && release.hidden !== true);
 
             // Determine if the current page is English or Portuguese
             const isPortuguese = window.location.pathname.includes('/br/');
