@@ -1,4 +1,4 @@
-const totalImages = 8; // Adjust this to reflect the number of images in the folder
+const totalImages = 11; // Adjust this to reflect the number of images in the folder
 let currentIndex = 0;
 const images = Array.from({ length: totalImages }, (_, i) => `../backend stuff/releasephotos/image${i + 1}.png`);
 const carouselImage = document.querySelector(".carousel-image");
