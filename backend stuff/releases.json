@@ -146,5 +146,15 @@
         "canplayer": "yes",
         "rawcaptions": "",
         "hidden": "true"
+    },
+    {
+        "id": "season1batch",
+        "displaytexten": "4kota season 1 batch",
+        "displaytextbr": "4kota temporada 1 completo",
+        "image": "../backend stuff/releasephotos/s1batch.png",
+        "en": "",
+        "br": "",
+        "canplayer": "no",
+        "hidden": "true"
     }
 ]
