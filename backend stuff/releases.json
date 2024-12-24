@@ -2,7 +2,7 @@
     {
         "id": "season2episode1",
         "displaytexten": "Season 2 Episode 1",
-        "displaytextbr": "Temporada 2 EpisÃ³dio 1",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 1",
         "image": "../backend stuff/releasephotos/image1.png",
         "en": "https://nyaa.si/view/1883144",
         "br": "https://discord.gg/hXPgj7dvM7",
@@ -15,7 +15,7 @@
     {
         "id": "season2episode2",
         "displaytexten": "Season 2 Episode 2",
-        "displaytextbr": "Temporada 2 EpisÃ³dio 2",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 2",
         "image": "../backend stuff/releasephotos/image2.png",
         "en": "https://nyaa.si/view/1886830",
         "br": "https://discord.gg/hXPgj7dvM7",
@@ -28,7 +28,7 @@
     {
         "id": "season2episode3",
         "displaytexten": "Season 2 Episode 3",
-        "displaytextbr": "Temporada 2 EpisÃ³dio 3",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 3",
         "image": "../backend stuff/releasephotos/image3.png",
         "en": "https://nyaa.si/view/1890623",
         "br": "https://discord.gg/hXPgj7dvM7",
@@ -41,7 +41,7 @@
     {
         "id": "season2episode4",
         "displaytexten": "Season 2 Episode 4",
-        "displaytextbr": "Temporada 2 EpisÃ³dio 4",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 4",
         "image": "../backend stuff/releasephotos/image4.png",
         "en": "https://nyaa.si/view/1894967",
         "br": "https://discord.gg/hXPgj7dvM7",
@@ -54,7 +54,7 @@
     {
         "id": "season2episode5",
         "displaytexten": "Season 2 Episode 5",
-        "displaytextbr": "Temporada 2 EpisÃ³dio 5",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 5",
         "image": "../backend stuff/releasephotos/image5.png",
         "en": "https://nyaa.si/view/1902074",
         "br": "",
@@ -67,7 +67,7 @@
     {
         "id": "season2episode6",
         "displaytexten": "Season 2 Episode 6",
-        "displaytextbr": "Temporada 2 EpisÃ³dio 6",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 6",
         "image": "../backend stuff/releasephotos/image6.png",
         "en": "https://nyaa.si/view/1905013",
         "br": "",
@@ -80,7 +80,7 @@
     {
         "id": "season2episode7",
         "displaytexten": "Season 2 Episode 7",
-        "displaytextbr": "Temporada 2 EpisÃ³dio 7",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 7",
         "image": "../backend stuff/releasephotos/image7.png",
         "en": "https://nyaa.si/view/1907498",
         "br": "",
@@ -93,7 +93,7 @@
     {
         "id": "season2episode8",
         "displaytexten": "Season 2 Episode 8",
-        "displaytextbr": "Temporada 2 EpisÃ³dio 8",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 8",
         "image": "../backend stuff/releasephotos/image8.png",
         "en": "https://nyaa.si/view/1908207",
         "br": "",
@@ -106,7 +106,7 @@
     {
         "id": "season2episode9",
         "displaytexten": "Season 2 Episode 9",
-        "displaytextbr": "Temporada 2 EpisÃ³dio 9",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 9",
         "image": "../backend stuff/releasephotos/image9.png",
         "en": "https://nyaa.si/view/1913824",
         "br": "",
@@ -119,26 +119,26 @@
     {
         "id": "season2episode10",
         "displaytexten": "Season 2 Episode 10",
-        "displaytextbr": "Temporada 2 EpisÃ³dio 10",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 10",
         "image": "../backend stuff/releasephotos/image10.png",
         "en": "",
         "br": "",
         "directlinken": "https://cdn.discordapp.com/attachments/1094274041952600195/1317796461194252288/4KOA_S2_EP_10_v2_no_ghost_microwave_.mp4?ex=67693797&is=6767e617&hm=9b36240742defd57986b11ac841baae4c85878b2a87b202566fc2fc61f2cf8c0&",
         "directlinkbr": "",
-        "episodetitle": "Wavering Hearts [NO EN SUBS]",
+        "episodetitle": "Wavering Hearts [No SUBS]",
         "canplayer": "yes",
         "rawcaptions": "/backend stuff/captions/episode10.vtt"
     },
     {
         "id": "season2episode11",
         "displaytexten": "Season 2 Episode 11",
-        "displaytextbr": "Temporada 2 EpisÃ³dio 11",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 11",
         "image": "../backend stuff/releasephotos/image11.png",
         "en": "",
         "br": "",
-        "directlinken": "https://cdn.discordapp.com/attachments/1094274041952600195/1320319380260786176/4KOA_S2_EP_11.mp4?ex=676b24fe&is=6769d37e&hm=f2cbcb605d258d5254531c47f00baabec9c72c1fff78051e4778bd6b163ddb2b&",
+        "directlinken": "https://cdn.discordapp.com/attachments/1094274041952600195/1320319380260786176/4KOA_S2_EP_11.mp4?ex=67692abe&is=6767d93e&hm=43d71d263ae9a9104ac1794cc422e2a17cb8bfa48ba5f89547d59018d5c457fe&",
         "directlinkbr": "",
-        "episodetitle": "The Boy's Fate [NO EN SUBS]",
+        "episodetitle": "The Boy's Fate [NO SUBS]",
         "canplayer": "yes",
         "rawcaptions": "/backend stuff/captions/episode11.vtt"
     },
