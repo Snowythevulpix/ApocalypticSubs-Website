@@ -31,11 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Set the text and link based on the language
                 const langText = isPortuguese ? release.displaytextbr : release.displaytexten;
                 const langLink = isPortuguese ? release.br : release.en;
+                const title = isPortuguese ? release.episodetitle : release.episodetitle;
+
 
                 const downloadLink = document.createElement("a");
                 downloadLink.href = langLink || "https://discord.gg/hXPgj7dvM7"; // Redirect to Discord if link is missing
                 downloadLink.textContent = langLink
-                    ? `${isPortuguese ? "Baixar" : "Download"} ${langText} (${isPortuguese ? "PT-BR" : "EN"})`
+                    ? `${isPortuguese ? "Baixar" : "Download"} ${langText} - ${title} (${isPortuguese ? "PT-BR" : "EN"})`
                     : (isPortuguese
                         ? "Estamos trabalhando duro para o lançamento, por favor, entre no nosso Discord para atualizações"
                         : "We are working on this release, please join our Discord for updates");
