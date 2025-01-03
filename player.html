@@ -610,9 +610,23 @@
             });
         }
 
+        // Function to fetch the URL for an episode from localhost
+        async function fetchEpisodeUrl(episodeId) {
+            try {
+                const response = await fetch(`https://laptop-bhfr9fgd.tail34634e.ts.net/geturl/${episodeId}`);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch episode URL');
+                }
+                const data = await response.json();
+                return data.url; // Return the URL from the API response
+            } catch (error) {
+                console.error('Error fetching episode URL:', error);
+                return null; // Return null if the request fails
+            }
+        }
 
         // Function to load the selected episode
-        function loadEpisode(episode) {
+        async function loadEpisode(episode) {
             document.getElementById('episodeTitleDisplay').textContent = `${episode.displaytexten} - ${episode.episodetitle}`;
             const playerContainer = document.getElementById('player');
             const episodeTitleDisplay = document.getElementById('episodeTitleDisplay');
@@ -620,6 +634,9 @@
 
             errorMessage.textContent = ''; // Clear previous error
             episodeTitleDisplay.textContent = `${episode.displaytexten} - ${episode.episodetitle}`;
+
+            // Print the episode ID to the console when it's loaded
+            console.log(`Loaded episode ID: ${episode.id}`);
 
             if (episode.canplayer === "no") {
                 errorMessage.textContent = "This release isn't player compatible.";
@@ -632,7 +649,6 @@
 
             // Create video element
             const video = document.createElement('video');
-            video.src = episode.directlinken;
             video.allow = "autoplay";
             video.controls = true;
 
@@ -652,8 +668,15 @@
                 console.warn('No subtitles available for this episode!');
             }
 
-            // Append video to the player container
-            playerContainer.appendChild(video);
+            // Fetch the video URL from the API
+            const videoUrl = await fetchEpisodeUrl(episode.id);
+            if (videoUrl) {
+                video.src = videoUrl; // Update the video source with the URL from the API
+                // Append video to the player container
+                playerContainer.appendChild(video);
+            } else {
+                errorMessage.textContent = 'Failed to load video URL.';
+            }
         }
 
         // Function to handle URL fragment and load the episode dynamically
@@ -676,6 +699,7 @@
         fetchReleases();
 
     </script>
+
 </body>
 
 </html>
