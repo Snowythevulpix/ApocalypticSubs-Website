@@ -96,7 +96,7 @@
                 console.log(episode); // Log each episode to see its properties
                 // Convert the 'hidden' value to a boolean (checking for "true" string or false value)
                 const isHidden = episode.hidden === "true" || episode.hidden === true;
-                return episode.canplayer !== "no" && !isHidden && episode.season === 2; // Filter by season 2
+                return episode.canplayer !== "no" && !isHidden && episode.season === 1; // Filter by season 2
             });
 
             if (validEpisodes.length === 0) {
@@ -116,7 +116,7 @@
         // Function to fetch the URL for an episode from localhost
         async function fetchEpisodeUrl(episodeId) {
             try {
-                const response = await fetch(`https://laptop-bhfr9fgd.tail34634e.ts.net/s2/${episodeId}`);
+                const response = await fetch(`https://laptop-bhfr9fgd.tail34634e.ts.net/s1/${episodeId}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch episode URL');
                 }

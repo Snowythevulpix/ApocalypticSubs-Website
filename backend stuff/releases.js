@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Filter data if an id is specified in the query, and exclude hidden releases
             const filteredData = requestedId
                 ? data.filter(release => release.id === requestedId && release.hidden !== "true" && release.hidden !== true)
-                : data.slice().reverse().filter(release => release.hidden !== "true" && release.hidden !== true);
+                : data.slice().reverse().filter(release => release.hidden !== "true" && release.hidden !== true && release.releasespage == "yes");
 
             // Determine if the current page is English or Portuguese
             const isPortuguese = window.location.pathname.includes('/br/');
