@@ -2,20 +2,20 @@
     {
         "id": "season1episode1",
         "displaytexten": "Season 1 Episode 1",
-        "displaytextbr": "Temporada 1 Episódio 1",
+        "displaytextbr": "Temporada 1 Epis\u00c3\u00b3dio 1",
         "image": "../backend stuff/releasephotos/placeholder.png",
         "en": "",
         "br": "https://discord.gg/hXPgj7dvM7",
-        "season": 1,
-        "episodetitle": "Season 1 episode 1 innit",
+        "episodetitle": "The boy's departure",
         "canplayer": "yes",
         "rawcaptions": "",
-        "releasespage": "yes"
+        "releasespage": "no",
+        "season": 1
     },
     {
         "id": "season2episode1",
         "displaytexten": "Season 2 Episode 1",
-        "displaytextbr": "Temporada 2 Episódio 1",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 1",
         "image": "../backend stuff/releasephotos/season2episode1.png",
         "en": "https://nyaa.si/view/1883144",
         "br": "https://discord.gg/hXPgj7dvM7",
@@ -28,7 +28,7 @@
     {
         "id": "season2episode2",
         "displaytexten": "Season 2 Episode 2",
-        "displaytextbr": "Temporada 2 Episódio 2",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 2",
         "image": "../backend stuff/releasephotos/season2episode2.png",
         "en": "https://nyaa.si/view/1886830",
         "br": "https://discord.gg/hXPgj7dvM7",
@@ -41,7 +41,7 @@
     {
         "id": "season2episode3",
         "displaytexten": "Season 2 Episode 3",
-        "displaytextbr": "Temporada 2 Episódio 3",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 3",
         "image": "../backend stuff/releasephotos/season2episode3.png",
         "en": "https://nyaa.si/view/1890623",
         "br": "https://discord.gg/hXPgj7dvM7",
@@ -54,7 +54,7 @@
     {
         "id": "season2episode4",
         "displaytexten": "Season 2 Episode 4",
-        "displaytextbr": "Temporada 2 Episódio 4",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 4",
         "image": "../backend stuff/releasephotos/season2episode4.png",
         "en": "https://nyaa.si/view/1894967",
         "br": "https://discord.gg/hXPgj7dvM7",
@@ -67,7 +67,7 @@
     {
         "id": "season2episode5",
         "displaytexten": "Season 2 Episode 5",
-        "displaytextbr": "Temporada 2 Episódio 5",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 5",
         "image": "../backend stuff/releasephotos/season2episode5.png",
         "en": "https://nyaa.si/view/1902074",
         "br": "",
@@ -80,7 +80,7 @@
     {
         "id": "season2episode6",
         "displaytexten": "Season 2 Episode 6",
-        "displaytextbr": "Temporada 2 Episódio 6",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 6",
         "image": "../backend stuff/releasephotos/season2episode6.png",
         "en": "https://nyaa.si/view/1905013",
         "br": "",
@@ -93,7 +93,7 @@
     {
         "id": "season2episode7",
         "displaytexten": "Season 2 Episode 7",
-        "displaytextbr": "Temporada 2 Episódio 7",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 7",
         "image": "../backend stuff/releasephotos/season2episode7.png",
         "en": "https://nyaa.si/view/1907498",
         "br": "",
@@ -106,7 +106,7 @@
     {
         "id": "season2episode8",
         "displaytexten": "Season 2 Episode 8",
-        "displaytextbr": "Temporada 2 Episódio 8",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 8",
         "image": "../backend stuff/releasephotos/season2episode8.png",
         "en": "https://nyaa.si/view/1908207",
         "br": "",
@@ -119,7 +119,7 @@
     {
         "id": "season2episode9",
         "displaytexten": "Season 2 Episode 9",
-        "displaytextbr": "Temporada 2 Episódio 9",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 9",
         "image": "../backend stuff/releasephotos/season2episode9.png",
         "en": "https://nyaa.si/view/1913824",
         "br": "",
@@ -132,7 +132,7 @@
     {
         "id": "season2episode10",
         "displaytexten": "Season 2 Episode 10",
-        "displaytextbr": "Temporada 2 Episódio 10",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 10",
         "image": "../backend stuff/releasephotos/season2episode10.png",
         "en": "https://nyaa.si/view/1915741",
         "br": "",
@@ -145,7 +145,7 @@
     {
         "id": "season2episode11",
         "displaytexten": "Season 2 Episode 11",
-        "displaytextbr": "Temporada 2 Episódio 11",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 11",
         "image": "../backend stuff/releasephotos/season2episode11.png",
         "en": "",
         "br": "",
@@ -170,7 +170,7 @@
     {
         "id": "season2episode12",
         "displaytexten": "Season 2 Episode 12",
-        "displaytextbr": "Temporada 2 Episódio 12",
+        "displaytextbr": "Temporada 2 Epis\u00c3\u00b3dio 12",
         "image": "../backend stuff/releasephotos/season2episode12.png",
         "en": "",
         "br": "",
