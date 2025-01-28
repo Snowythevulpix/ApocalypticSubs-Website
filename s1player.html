@@ -260,6 +260,46 @@
             document.getElementById('submitButton').addEventListener('click', reportError);
         };
 
+        window.onload = function () {
+            // Create and display the note popup
+            const notePopup = document.createElement('div');
+            notePopup.id = 'notePopup';
+            notePopup.style.position = 'fixed';
+            notePopup.style.top = '50%';
+            notePopup.style.left = '55%';
+            notePopup.style.transform = 'translate(-50%, -50%)';
+            notePopup.style.backgroundColor = 'red';
+            notePopup.style.border = '1px solid #f5c2c7';
+            notePopup.style.padding = '20px';
+            notePopup.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+            notePopup.style.borderRadius = '10px';
+            notePopup.style.zIndex = '1000';
+            notePopup.style.textAlign = 'center';
+            notePopup.style.fontFamily = 'Arial, sans-serif';
+
+            const message = document.createElement('p');
+            message.textContent = "NOTE:\nThese subs are v1's. They are prone to errors and not all episodes are available right now.";
+            message.style.whiteSpace = 'pre-line';
+            message.style.marginBottom = '20px';
+
+            const okButton = document.createElement('button');
+            okButton.textContent = 'OK';
+            okButton.style.padding = '10px 20px';
+            okButton.style.border = 'none';
+            okButton.style.backgroundColor = 'blue';
+            okButton.style.color = 'white';
+            okButton.style.borderRadius = '5px';
+            okButton.style.cursor = 'pointer';
+            okButton.addEventListener('click', () => {
+                document.body.removeChild(notePopup);
+            });
+
+            notePopup.appendChild(message);
+            notePopup.appendChild(okButton);
+            document.body.appendChild(notePopup);
+        };
+
+
     </script>
 
 </body>
