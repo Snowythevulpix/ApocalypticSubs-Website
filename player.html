@@ -166,8 +166,8 @@
             if (episode.rawcaptions) {
                 const subtitleTrack = document.createElement('track');
                 subtitleTrack.kind = 'subtitles'; // Can also be 'captions'
-                subtitleTrack.label = 'Japanese'; // Subtitle track label
-                subtitleTrack.srclang = 'jpn'; // Language of the subtitles (e.g., 'en' for English)
+                subtitleTrack.label = 'English'; // Subtitle track label
+                subtitleTrack.srclang = 'en'; // Language of the subtitles (e.g., 'en' for English)
                 subtitleTrack.src = episode.rawcaptions; // URL of the subtitle file
                 subtitleTrack.default = true; // Enable by default
                 video.appendChild(subtitleTrack);
