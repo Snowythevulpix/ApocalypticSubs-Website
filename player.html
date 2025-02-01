@@ -111,6 +111,27 @@
             validEpisodes.forEach(episode => {
                 const episodeElement = document.createElement('li');
                 episodeElement.textContent = episode.episodetitle;
+
+                // Add a click event listener with a cooldown
+                episodeElement.addEventListener('click', () => {
+                    // Disable the click event
+                    episodeElement.style.pointerEvents = 'none';
+
+                    // Load the episode
+                    loadEpisode(episode);
+
+                    // Re-enable the click event after 3 seconds
+                    setTimeout(() => {
+                        episodeElement.style.pointerEvents = 'auto';
+                    }, 3000); // 3000 milliseconds = 3 seconds
+                });
+
+                episodeTitlesContainer.appendChild(episodeElement);
+            });
+
+            validEpisodes.forEach(episode => {
+                const episodeElement = document.createElement('li');
+                episodeElement.textContent = episode.episodetitle;
                 episodeElement.addEventListener('click', () => loadEpisode(episode));
                 episodeTitlesContainer.appendChild(episodeElement);
             });
