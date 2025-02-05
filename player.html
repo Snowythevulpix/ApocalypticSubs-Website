@@ -14,11 +14,12 @@
     <meta property="og:type" content="website">
     <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
     <link href="/backend stuff/player.css" rel="stylesheet">
-
+    <!-- Plyr CSS -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+    <!-- Plyr JS -->
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
 </head>
 <header>
-
-
     <!-- Make sure the logo is also correctly referenced -->
     <nav>
         <img src="backend%20stuff/logo.png" alt="Logo">
@@ -175,10 +176,12 @@
             // Clear the player container
             playerContainer.innerHTML = '';
 
-            // Create video element
+            // Create video element (Plyr-compatible)
             const video = document.createElement('video');
-            video.allow = "autoplay";
+            video.classList.add('plyr');  // Ensure Plyr styles apply
             video.controls = true;
+            video.crossOrigin = "anonymous"; // Prevent CORS issues
+
 
             // Set poster image
             video.poster = episode.image || './backend stuff/releasephotos/placeholder.png';
@@ -202,6 +205,15 @@
                 video.src = videoUrl; // Update the video source with the URL from the API
                 // Append video to the player container
                 playerContainer.appendChild(video);
+
+                // Initialise Plyr
+                const plyrPlayer = new Plyr(video, {
+                    controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'fullscreen'],
+                    autoplay: false,  // Set to true if you want autoplay
+                    keyboard: { focused: true, global: true }
+                });
+
+                console.log("Plyr player initialised!");
             } else {
                 errorMessage.textContent = 'Failed to load video URL.';
             }
