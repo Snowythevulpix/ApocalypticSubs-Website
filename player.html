@@ -25,7 +25,7 @@
         <a href="./">Home</a>
         <a href="./faq.html">FAQ</a>
         <a href="./player.html">Player</a>
-        <a href="./s1player.html">Season 1 player</a>
+        <!-- <a href="./s1player.html">Season 1 player</a> -->
         <a href="javascript:void(0);" onclick="toggleForm()">Report error</a>
 
 
@@ -41,7 +41,7 @@
             <a href="./">Home</a>
             <a href="./faq.html">FAQ</a>
             <a href="./player.html">Player</a>
-            <a href="./s1player.html">Season 1 player</a>
+            <!-- <a href="./s1player.html">Season 1 player</a> -->
             <a href="javascript:void(0);" onclick="toggleForm()">Report error</a>
 
         </div>
@@ -90,17 +90,34 @@
         }
 
         // Function to generate episode list
+        // Function to get the season number from the URL
+        function getSeasonFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const season = urlParams.get('season');
+            return season ? parseInt(season, 10) : 2; // Default to season 2 if not specified
+        }
+
+        // Function to redirect to ?season=2 if no season parameter is present
+        function ensureSeasonParameter() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (!urlParams.has('season')) {
+                const newUrl = `${window.location.pathname}?season=2${window.location.hash}`;
+                window.location.replace(newUrl);
+            }
+        }
+
+        // Function to generate episode list
         function generateEpisodeList(releases) {
             document.getElementById('episodeTitleDisplay').textContent = "Select any episode to play.";
             const episodeTitlesContainer = document.getElementById('episodeTitles');
             const episodeListContainer = document.getElementById('episodeListContainer');
 
-            // Filter episodes with canplayer !== "no", hidden !== true, and season === 2
+            const season = getSeasonFromURL(); // Get the season number from the URL
+
+            // Filter episodes with canplayer !== "no", hidden !== true, and season === the specified season
             const validEpisodes = releases.filter(episode => {
-                console.log(episode); // Log each episode to see its properties
-                // Convert the 'hidden' value to a boolean (checking for "true" string or false value)
                 const isHidden = episode.hidden === "true" || episode.hidden === true;
-                return episode.canplayer !== "no" && !isHidden && episode.season === 2; // Filter by season 2
+                return episode.canplayer !== "no" && !isHidden && episode.season === season;
             });
 
             if (validEpisodes.length === 0) {
@@ -128,104 +145,11 @@
 
                 episodeTitlesContainer.appendChild(episodeElement);
             });
-
-            validEpisodes.forEach(episode => {
-                const episodeElement = document.createElement('li');
-                episodeElement.textContent = episode.episodetitle;
-                episodeElement.addEventListener('click', () => loadEpisode(episode));
-                episodeTitlesContainer.appendChild(episodeElement);
-            });
         }
 
-
-        // Function to fetch the URL for an episode from localhost
-        async function fetchEpisodeUrl(episodeId) {
-            try {
-                const response = await fetch(`https://laptop-bhfr9fgd.tail34634e.ts.net/s2/${episodeId}`);
-                if (!response.ok) {
-                    throw new Error('Failed to fetch episode URL');
-                }
-                const data = await response.json();
-                return data.url; // Return the URL from the API response
-            } catch (error) {
-                console.error('Error fetching episode URL:', error);
-                return null; // Return null if the request fails
-            }
-        }
-
-        // Function to load the selected episode
-        async function loadEpisode(episode) {
-            document.getElementById('episodeTitleDisplay').textContent = `${episode.displaytexten} - ${episode.episodetitle}`;
-            const playerContainer = document.getElementById('player');
-            const episodeTitleDisplay = document.getElementById('episodeTitleDisplay');
-            const errorMessage = document.getElementById('errorMessage');
-
-            errorMessage.textContent = ''; // Clear previous error
-            episodeTitleDisplay.textContent = `${episode.displaytexten} - ${episode.episodetitle}`;
-
-            // Print the episode ID to the console when it's loaded
-            console.log(`Loaded episode ID: ${episode.id}`);
-
-            if (episode.canplayer === "no") {
-                errorMessage.textContent = "This release isn't player compatible.";
-                playerContainer.innerHTML = ''; // Clear the player if not compatible
-                return;
-            }
-
-            // Clear the player container
-            playerContainer.innerHTML = '';
-
-            // Create video element
-            const video = document.createElement('video');
-            video.allow = "autoplay";
-            video.controls = true;
-
-            // Set poster image
-            video.poster = episode.image || './backend stuff/releasephotos/placeholder.png';
-
-            // Add subtitles (track element)
-            if (episode.rawcaptions) {
-                const subtitleTrack = document.createElement('track');
-                subtitleTrack.kind = 'subtitles'; // Can also be 'captions'
-                subtitleTrack.label = 'English'; // Subtitle track label
-                subtitleTrack.srclang = 'en'; // Language of the subtitles (e.g., 'en' for English)
-                subtitleTrack.src = episode.rawcaptions; // URL of the subtitle file
-                subtitleTrack.default = true; // Enable by default
-                video.appendChild(subtitleTrack);
-            } else {
-                console.warn('No subtitles available for this episode!');
-            }
-
-            // Fetch the video URL from the API
-            const videoUrl = await fetchEpisodeUrl(episode.id);
-            if (videoUrl) {
-                video.src = videoUrl; // Update the video source with the URL from the API
-                // Append video to the player container
-                playerContainer.appendChild(video);
-            } else {
-                errorMessage.textContent = 'Failed to load video URL.';
-            }
-        }
-
-        // Function to handle URL fragment and load the episode dynamically
-        function handleURLFragment(releases) {
-            const fragment = window.location.hash.substring(1); // Get the fragment without '#'
-            if (!fragment) return; // Exit if no fragment present
-
-            const matchedEpisode = releases.find(
-                episode => episode.id === fragment // Assuming 'id' in releases.json matches the fragment
-            );
-
-            if (matchedEpisode) {
-                loadEpisode(matchedEpisode); // Load the matching episode
-            } else {
-                console.warn('No matching episode found for the provided fragment:', fragment);
-            }
-        }
-
-        // Initialize by fetching the releases data
+        // Initialize by ensuring the season parameter is present and fetching the releases data
+        ensureSeasonParameter();
         fetchReleases();
-
     </script>
 
     <!-- Popup form container -->
