@@ -23,7 +23,6 @@
     <nav>
         <img src="backend%20stuff/logo.png" alt="Logo">
         <a href="./">Home</a>
-        <a href="./faq.html">FAQ</a>
         <a href="./player.html">Player</a>
         <a href="./s1player.html">Season 1 player</a>
         <a href="javascript:void(0);" onclick="toggleForm()">Report error</a>
@@ -111,27 +110,6 @@
             validEpisodes.forEach(episode => {
                 const episodeElement = document.createElement('li');
                 episodeElement.textContent = episode.episodetitle;
-
-                // Add a click event listener with a cooldown
-                episodeElement.addEventListener('click', () => {
-                    // Disable the click event
-                    episodeElement.style.pointerEvents = 'none';
-
-                    // Load the episode
-                    loadEpisode(episode);
-
-                    // Re-enable the click event after 3 seconds
-                    setTimeout(() => {
-                        episodeElement.style.pointerEvents = 'auto';
-                    }, 3000); // 3000 milliseconds = 3 seconds
-                });
-
-                episodeTitlesContainer.appendChild(episodeElement);
-            });
-
-            validEpisodes.forEach(episode => {
-                const episodeElement = document.createElement('li');
-                episodeElement.textContent = episode.episodetitle;
                 episodeElement.addEventListener('click', () => loadEpisode(episode));
                 episodeTitlesContainer.appendChild(episodeElement);
             });
@@ -187,8 +165,8 @@
             if (episode.rawcaptions) {
                 const subtitleTrack = document.createElement('track');
                 subtitleTrack.kind = 'subtitles'; // Can also be 'captions'
-                subtitleTrack.label = 'English'; // Subtitle track label
-                subtitleTrack.srclang = 'en'; // Language of the subtitles (e.g., 'en' for English)
+                subtitleTrack.label = 'Japanese'; // Subtitle track label
+                subtitleTrack.srclang = 'jpn'; // Language of the subtitles (e.g., 'en' for English)
                 subtitleTrack.src = episode.rawcaptions; // URL of the subtitle file
                 subtitleTrack.default = true; // Enable by default
                 video.appendChild(subtitleTrack);
