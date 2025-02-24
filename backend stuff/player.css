@@ -560,3 +560,61 @@ nav a:hover {
 .popup-content button:hover {
     background: #0056b3;
 }
+    /* Style for the popup form */
+    #popupForm {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Semi-transparent background */
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        /* Ensure it's on top */
+      }
+  
+      .popup-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        position: relative;
+        /* For close button positioning */
+      }
+  
+      .close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        color: #888;
+      }
+  
+      /* Style for the error popup */
+      #errorPopup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        z-index: 1001;
+        /* Higher than the report form */
+      }
+  
+      .error-popup-content {
+        background-color: red;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        position: relative;
+      }
