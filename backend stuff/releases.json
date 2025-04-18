@@ -225,6 +225,17 @@
       "episodetitle": "I'm Here",
       "canplayer": "no",
       "releasespage": "yes"
+    },
+    {
+      "id": "vigilantes02",
+      "displaytexten": "My Hero Academia: Vigilantes 02",
+      "displaytextbr": "",
+      "image": "../backend stuff/releasephotos/vigilantes2.png",
+      "en": "",
+      "br": "",
+      "episodetitle": "Takeoff",
+      "canplayer": "no",
+      "releasespage": "yes"
     }
   ]
   
