@@ -231,9 +231,20 @@
       "displaytexten": "My Hero Academia: Vigilantes 02",
       "displaytextbr": "",
       "image": "../backend stuff/releasephotos/vigilantes2.png",
-      "en": "",
+      "en": "https://nyaa.si/view/1965583",
       "br": "",
       "episodetitle": "Takeoff",
+      "canplayer": "no",
+      "releasespage": "yes"
+    },
+    {
+      "id": "vigilantes03",
+      "displaytexten": "My Hero Academia: Vigilantes 03",
+      "displaytextbr": "",
+      "image": "../backend stuff/releasephotos/vigilantes3.png",
+      "en": "",
+      "br": "",
+      "episodetitle": "Bee",
       "canplayer": "no",
       "releasespage": "yes"
     }
