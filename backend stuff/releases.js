@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(data => {
             // Get the query parameter from the URL
             const urlParams = new URLSearchParams(window.location.search);
-            const requestedId = urlParams.keys().next().value;
+            const requestedId = urlParams.get("post");
 
             // Filter data if an id is specified in the query, and exclude hidden releases
             const filteredData = requestedId
@@ -57,3 +57,5 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => console.error("Error loading releases:", error));
 });
+
+
