@@ -55,8 +55,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 releaseDiv.classList.add("release");
 
                 const img = document.createElement("img");
-                img.src = release.image || "/NNT/ApocalypticSubs/backend stuff/releasephotos/placeholder.png";
+                const imgPath = release.image || "./backend stuff/releasephotos/placeholder.png";
+                img.src = imgPath;
                 img.alt = `${release.displaytext || "Release"} Image`;
+
+                // Check if the image is valid by adding an onError event handler
+                img.onerror = () => {
+                    img.src = "./backend stuff/releasephotos/placeholder.png"; // Fallback image
+                };
+
                 releaseDiv.appendChild(img);
 
                 const langText = isPortuguese ? release.displaytextbr : release.displaytexten;
