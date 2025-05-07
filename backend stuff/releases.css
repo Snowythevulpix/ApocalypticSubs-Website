@@ -142,3 +142,76 @@ main {
         /* Full width for buttons */
     }
 }
+.staff-credit-button {
+    display: block;
+    margin-top: 10px;
+    color: white;
+    background-color: #390000;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Pirata One', sans-serif;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+
+
+.staff-credit-button:hover {
+    background-color: red;
+    color: black;
+}
+
+/* Popup overlay */
+.staff-popup {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Popup box */
+.staff-popup-content {
+    background-color: #390000;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 0 20px #bd0d07;
+    position: relative;
+    font-family: 'Pirata One', sans-serif;
+    text-align: center;
+}
+
+/* Close button */
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Staff list */
+#popupStaffList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#popupStaffList li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Hide class for popup */
+.hidden {
+    display: none;
+}
